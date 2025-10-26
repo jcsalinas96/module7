@@ -1,11 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
-/* <a href="default.asp"><img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"></a> */
+	
+	
 	body {
 	  font-family: Arial, sans-serif;
 	  margin: 0;
 	  padding: 0;
-	  background-color: lightcyan;
+	  background-color: white;
 	  color: #333;
 
 	}
@@ -20,7 +21,7 @@
 
 /* Navigation bar styling */
 	nav {
-		background-color: #333;
+		background-color: #c9873f;
 		padding: 10px;
 		text-align: center;
 	}
@@ -33,7 +34,7 @@
 	}
 
 	nav a:hover {
-		color: #4CAF50;
+		color: #617b4c;
 	}
 
 /* Main content styling */
@@ -57,4 +58,148 @@
 		bottom: 0;
 		width: 100%;
 	}
+
+/*	:root {
+		  gap: 24px;
+		  pale:#e6e6e6;
+		  bg:#fafafa;
+		  border:#ddd;
+		  text:#111;
+		  container-pad:28px;
+		  rounded:10px;
+		  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+		}
+
+  /*  body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding:20px;
+      box-sizing:border-box;
+    } */
+
+    /* outer frame like the white card in the picture */
+
+
+	.frame{
+		width:1100px;
+		max-width:96vw;
+		background:white;
+		border:10px solid #266f65;
+		box-shadow: 0 0 0 1px var(border) inset;
+		padding:var(container-pad);
+		box-sizing:border-box;
+	}
+
+    /* top area: logo + top nav + blog title bar */
+	.top {
+		display:grid;
+		grid-template-columns: 160px 1fr;
+		gap:var(gap);
+		align-items:start;
+		margin-bottom:var(gap);
+	}
+
+	.logo{
+		background-color: white;
+		min-height: 130px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 4px;
+		margin: 5px 5px 5px 12px;
+	}
+
+    /* nav buttons aligned above blog title across top of content column */
+    .top-right {
+      display:flex;
+      flex-direction:column;
+      margin: 5px 5px 5px 5px;
+    }
+
+    .nav-buttons{
+      	display:flex;
+		justify-content:space-evenly;
+     
+    }
+
+	.nav-buttons button{
+		background-color:#CFAF8D;
+		border:2px solid #2C3A28;
+		display: flex;
+		flex-direction: row;
+		padding:10px 26px;
+		border-radius:12px;
+		cursor:pointer;
+		font-size:16px;
+		box-shadow: 0 2px 0 rgba(0,0,0,0.03);
+	}
+
+	.blog-title{
+		
+		display: flex;
+		background-color: aliceblue;
+		padding:5px 5px 5px 5px;
+		text-align: center;
+		font-size:30px;
+		border-radius:4px;
+		margin: 10px 0px 10px 0px;
+	}
+
+    /* main grid: left nav, content, right sidebar */
+    .main {
+      display:grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap:var(--gap);
+      align-items:start;
+      margin-bottom:var(--gap);
+    }
+
+    .left-nav, .right-sidebar{
+      background:var(--pale);
+      padding:18px;
+      min-height:360px;
+	
+      border-radius:4px;
+      box-sizing:border-box;
+    }
+
+    .left-nav ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      align-items:flex-start;
+    }
+
+    .left-nav li{
+      font-size:18px;
+    }
+
+    .content{
+      background:var(--pale);
+      padding:28px;
+      min-height:360px;
+	  border-radius:4px;
+      box-sizing:border-box;
+      font-size:20px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .footer{
+      background:var(--pale);
+      padding:14px;
+      text-align:center;
+      border-radius:4px;
+      font-size:18px;
+    }
 

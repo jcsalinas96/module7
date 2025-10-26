@@ -6,152 +6,27 @@
   	<title>Big Adventures</title>
 	<link rel="stylesheet" href="style.css">
   <style>
-    :root{
-      --gap: 24px;
-      --pale:#e6e6e6;
-      --bg:#fafafa;
-      --border:#ddd;
-      --text:#111;
-      --container-pad:28px;
-      --rounded:10px;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-
-  /*  body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:100vh;
-      padding:20px;
-      box-sizing:border-box;
-    } */
-
-    /* outer frame like the white card in the picture */
-    .frame{
-      width:1100px;
-      max-width:96vw;
-      background:white;
-      border:10px solid #f3f3f3;
-      box-shadow: 0 0 0 1px var(--border) inset;
-      padding:var(--container-pad);
-      box-sizing:border-box;
-    }
-
-    /* top area: logo + top nav + blog title bar */
-	.top {
-		display:grid;
-		grid-template-columns: 160px 1fr;
-		gap:var(--gap);
-		align-items:start;
-		margin-bottom:var(--gap);
-	}
-
-	.logo{
-    background: var(--pale);
-    min-height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    border-radius: 4px;
-	}
-
-    /* nav buttons aligned above blog title across top of content column */
-    .top-right {
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-
-    .nav-buttons{
-      display:flex;
-      gap:14px;
-      justify-content:center;
-    }
-
-	.nav-buttons button{
-		background:var(--pale);
-		border:1px solid var(--border);
-		display: flex;
-		flex-direction: row;
-		padding:10px 26px;
-		border-radius:12px;
-		cursor:pointer;
-		font-size:16px;
-		box-shadow: 0 2px 0 rgba(0,0,0,0.03);
-	}
-
-	.blog-title{
-		background:var(--pale);
-		display: flex;
-		padding:18px;
-		text-align:center;
-		font-size:20px;
-		border-radius:4px;
-	}
-
-    /* main grid: left nav, content, right sidebar */
-    .main {
-      display:grid;
-      grid-template-columns: 180px 1fr 180px;
-      gap:var(--gap);
-      align-items:start;
-      margin-bottom:var(--gap);
-    }
-
-    .left-nav, .right-sidebar{
-      background:var(--pale);
-      padding:18px;
-      min-height:360px;
-      border-radius:4px;
-      box-sizing:border-box;
-    }
-
-    .left-nav ul{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-      align-items:flex-start;
-    }
-
-    .left-nav li{
-      font-size:18px;
-    }
-
-    .content{
-      background:var(--pale);
-      padding:28px;
-      min-height:360px;
-      border-radius:4px;
-      box-sizing:border-box;
-      font-size:20px;
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
-      text-align:center;
-    }
-
-    .footer{
-      background:var(--pale);
-      padding:14px;
-      text-align:center;
-      border-radius:4px;
-      font-size:18px;
-    }
-
+	  /*background: #2AA897;
+	  background: linear-gradient(178deg,rgba(42, 168, 151, 1) 0%, rgba(186, 194, 105, 1) 50%, rgba(243, 204, 78, 1) 100%);
+	  
     /* small responsive adjustments */
     @media (max-width:900px){
       .top{ grid-template-columns: 120px 1fr; }
       .main{ grid-template-columns: 1fr; }
       .left-nav, .right-sidebar{ min-height:120px; }
       .nav-buttons{ flex-wrap:wrap; gap:8px; justify-content:flex-start; }
-    }
+	}
+	  
+	@media only screen and (max-width:800px) {
+	/* For tablets: 
+		.main {
+		width: 80%;
+		padding: 0;
+		}
+		.right {
+		width: 100%;
+		}
+	}*/
   </style>
   <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
   <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
@@ -160,9 +35,9 @@
 <script src="jQueryAssets/jquery.ui-1.10.4.accordion.min.js"></script>
 </head>
 <body>
-  <div class="frame" role="document" aria-label="Wireframe mockup">
+  <div class="frame">
     <div class="top">
-     <div class="logo" aria-hidden="true">Logo</div>
+     <div class="logo"><img src="images/logo.jpg" alt="Big Adventure logo" style="width:140px;height:125px;"></div>
 
       <div class="top-right">
         <nav class="nav-buttons" aria-label="Top navigation">
@@ -172,7 +47,7 @@
           <button type="button">Contact Us</button>
         </nav>
 
-        <div class="blog-title" role="banner">Blog Post Name</div>
+        <div class="blog-title">Blog Post Name</div>
       </div>
     </div>
 
@@ -195,10 +70,31 @@
         </div>
              </aside>
 
-      <main class="content" role="main">
+      <main class="content">
         <div>
           <h2 style="margin-top:0;">Overview of Website</h2>
           <p style="margin:0;">(Main Article/Content Block)</p>
+			
+			<button onclick="getLocation()">Try It</button>
+
+			<p id="demo"></p>
+
+			<script>
+			const x = document.getElementById("demo");
+
+			function getLocation() {
+			  try {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			  } catch(err) {
+				x.innerHTML = err;
+			  }
+			}
+
+			function showPosition(position) {
+			  x.innerHTML = "Latitude: " + position.coords.latitude + 
+			  "<br>Longitude: " + position.coords.longitude;
+			}
+			</script>
         </div>
       </main>
 
@@ -208,7 +104,9 @@
       </aside>
     </div>
 
-    <div class="footer" role="contentinfo">Footer</div>
+    <div class="footer" role="contentinfo">
+		
+	  </div>
   </div>
 <script type="text/javascript">
 $(function() {
