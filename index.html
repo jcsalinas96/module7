@@ -9,7 +9,7 @@
   <style>
     /* ---------- RESPONSIVE LAYOUTS ---------- */
 
-    /* ========== MOBILE (phones up to 600px) ========== */
+    /*  MOBILE (phones up to 600px)  */
     @media (max-width: 600px) {
       body {
         font-size: 14px;
@@ -56,7 +56,7 @@
       }
     }
 
-    /* ========== TABLET (601px–1024px) ========== */
+    /*  TABLET (601px–1024px)  */
     @media (min-width: 601px) and (max-width: 1024px) {
       .frame {
         width: 95%;
@@ -81,7 +81,7 @@
       }
     }
 
-    /* ========== LAPTOP / DESKTOP (1025px and above) ========== */
+    /*  LAPTOP / DESKTOP (1025px and above)  */
     @media (min-width: 1025px) {
       .frame {
         width: 1100px;
@@ -97,48 +97,74 @@
       }
     }
   </style>
+	<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+	<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+	<link href="jQueryAssets/jquery.ui.accordion.min.css" rel="stylesheet" type="text/css">
+	<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+	<script src="jQueryAssets/jquery.ui-1.10.4.accordion.min.js"></script>
 </head>
 
 <body>
-  <div class="frame">
-    <header class="top">
-      <div class="logo">
-        <img src="images/logo.jpg" alt="Big Adventure logo" />
-      </div>
+	<div class="frame">
+		<header class="top">
+			<div class="logo">
+				<img src="images/logo.jpg" alt="Big Adventure logo" />
+			</div>
 
-      <div class="top-right">
-        <nav class="nav-buttons" aria-label="Main navigation">
-          <button type="button">Home</button>
-          <button type="button">About</button>
-          <button type="button">Resources</button>
-          <button type="button">Contact Us</button>
-        </nav>
+			<div class="top-right">
+				<nav class="nav-buttons" aria-label="Main navigation">
+					<button type="button">Home</button>
+					<button type="button">About</button>
+					<button type="button">Resources</button>
+					<button type="button">Contact Us</button>
+				</nav>
 
-        <div class="blog-title">Blog Post Name</div>
-      </div>
-    </header>
+
+			<div class="blog-title">Big Adventures on a Small Budget</div>
+	</div>
+	</header>
 
     <main class="main">
-      <aside class="left-nav" aria-label="Primary navigation">
-        <h3>Navigation</h3>
-        <details open>
-          <summary>Section 1</summary>
-          <p>Content 1</p>
-        </details>
-        <details>
-          <summary>Section 2</summary>
-          <p>Content 2</p>
-        </details>
-        <details>
-          <summary>Section 3</summary>
-          <p>Content 3</p>
-        </details>
-      </aside>
+	<aside class="left-nav" aria-label="Primary navigation">
+		<h3>Navigation</h3>
+		<div id="Accordion1">
+			<h4><a href="#">Where &amp; When</a></h4>
+		<div>
+			<p>Choosing a destination and when to go.</p>
+		</div>
+			<h4><a href="#">Section 2</a></h4>
+		<div>
+			<p>Content 2</p>
+		</div>
+			<h4><a href="#">Section 3</a></h4>
+		<div>
+			<p>Content 3</p>
+		</div>
+			<h4><a href="#">Section 4</a></h4>
+		<div>
+			<p>Content 4</p>
+		</div>
+			<h4><a href="#">Section 5</a></h4>
+		<div>
+			<p>Content 5</p>
+		</div>
+			<h4><a href="#">Section 6</a></h4>
+		<div>
+			<p>Content 6</p>
+		</div>
+		</div>
+	</aside>
 
-      <section class="content">
-        <h2>Overview of Website</h2>
-        <p>(Main Article / Content Block)</p>
-      </section>
+
+	<section class="content">
+		<h2>Overview of Website</h2>
+			<p>This blog is dedicated to sharing some of my practical tips that I use to make travel affordable and accessible. Traveling on a budget is important because it allows anyone to explore new places without causing financial stress. In this post, I’ll show you simple but effective tips I have used to have a meaningful but inexpensive travel experience.</p>
+			<p>The most important way to save on travel is to plan ahead and be flexible with your plans. I book flights and hotels early to get lower prices. Use websites like Expedia, Hotwire, or Booking.com and check different days of the week, as well as different times of the year to travel. Sign up with rewards programs and deal alerts for airlines and hotels. I like to find other types of lodging besides hotels. Some camping and RV sites offer cabins or tiny homes to rent out which offer more privacy than a hotel and often cost less.</p>
+			<p>Saving on food when traveling is important to staying on budget. Avoid touristy restaurants, look for food trucks, street vendors, farmer’s markets, or locally owned food establishments. If where you are staying has a kitchen, then buying groceries and cooking meals yourself will help stretch your budget. Some tourist attractions do allow visitors to bring in their own food and drinks. Be sure to verify with the official website for any places you visit</p>
+			<p>Traveling on a budget takes a little extra planning, but the savings are worth it. Flexibility with your travel dates, looking for other forms of lodging, and carefully choosing where to eat, will help you cut costs without cutting back on your experiences. Your goal isn’t to just save on spending, but to make your money go further. Using some of my tips you’ll see how travel can be affordable and just as fun as any luxury trip.</p>
+		
+
+	</section>
 
       <aside class="right-sidebar" aria-label="Related resources">
         <h3>Related Resources</h3>
@@ -147,10 +173,12 @@
     </main>
 
     <footer class="footer" role="contentinfo">
-      <button id="locationBtn">Get My Location</button>
+      <button id="locationBtn">Get My Location
+				</button>
       <p id="demo"></p>
     </footer>
-  </div>
+	  </div>
+
 
   <script>
     const output = document.getElementById("demo");
