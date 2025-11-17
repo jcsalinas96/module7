@@ -1,10 +1,154 @@
+
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resources</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ---------- RESPONSIVE LAYOUTS ---------- */
+
+    /*  MOBILE (phones up to 600px)  */
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px;
+        background-color: #fff;
+      }
+
+      .frame {
+        width: 100%;
+        border-width: 6px;
+        padding: 16px;
+      }
+
+      .top {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .logo img {
+        width: 100px;
+        height: auto;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .main {
+        grid-template-columns: 1fr;
+      }
+
+      .left-nav,
+      .right-sidebar {
+        min-height: auto;
+      }
+
+      .blog-title {
+        font-size: 22px;
+      }
+
+      .footer {
+        font-size: 14px;
+      }
+    }
+
+    /*  TABLET (601px–1024px)  */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .frame {
+        width: 95%;
+        padding: 20px;
+      }
+
+      .top {
+        grid-template-columns: 140px 1fr;
+      }
+
+      .main {
+        grid-template-columns: 160px 1fr;
+      }
+
+      .left-nav,
+      .right-sidebar {
+        min-height: 200px;
+      }
+
+      .blog-title {
+        font-size: 26px;
+      }
+    }
+
+    /*  LAPTOP / DESKTOP (1025px and above)  */
+    @media (min-width: 1025px) {
+      .frame {
+        width: 1100px;
+        margin: 0 auto;
+      }
+
+      .main {
+        grid-template-columns: 180px 1fr 180px;
+      }
+
+      .blog-title {
+        font-size: 30px;
+      }
+    }
+  </style>
+	
 </head>
 
 <body>
-</body>
-</html>
+	<div class="frame">
+		<header class="top">
+			<div class="logo">
+				<img src="images/logo.jpg" alt="Big Adventure logo" />
+			</div>
+
+			<div class="top-right">
+				<nav class="nav-buttons" aria-label="Main navigation">
+					<button type="button">Home</button>
+					<button type="button">About</button>
+					<button type="button">Resources</button>
+					<button type="button">Contact Us</button>
+				</nav>
+
+
+			<div class="blog-title">Big Adventures on a Small Budget</div>
+	</div>
+	</header>
+
+    <main class="main">
+	<aside class="left-nav" aria-label="Primary navigation">
+		<h3>Navigation</h3>
+			<h4><a href="destinations.html">Where &amp; When</a></h4>
+				<p>Choosing a destination and when to go.</p>
+			<h4><a href="costs.html">Hidden Costs</a></h4>
+				<p>Extra costs you can avoid.</p>
+			<h4><a href="packing.html">Packing</a></h4>
+				<p>What to pack and what to leave behind.</p>
+			<h4><a href="food.html">Let's Do Lunch</a></h4>
+				<p>Eating on a budget.</p>
+			<h4><a href="saving.html">A Penny Saved</a></h4>
+				<p>Ways to save or fund your vacation.</p>
+			<h4><a href="tools.html">Tools</a></h4>
+				<p>Websites &amp; apps to help plan your vacation.</p>
+		
+	</aside>
+
+
+	<section class="content">
+		<h2>Additional Resources</h2>
+			
+		
+
+	</section>
+
+      <aside class="right-sidebar" aria-label="Related resources">
+        <h3>Related Resources</h3>
+        <p>(Links, ads, or widgets)</p>
+      </aside>
+    </main>
