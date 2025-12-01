@@ -96,7 +96,31 @@
       }
     }
   </style>
-	
+	<!-- jQuery & jQuery UI -->
+<link rel="stylesheet" href="css/jquery-ui.css">
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+<script>
+  $(function() {
+    $("#accordion").accordion({
+      heightStyle: "content",
+      collapsible: true,
+      active: false
+    });
+  });
+</script>
+
+  $( function() {
+    $("#accordion").accordion({
+      heightStyle: "content",
+      collapsible: true,
+      active: false
+    });
+  });
+</script>
+
 </head>
 
 <body>
@@ -129,23 +153,42 @@
 
     <main class="main">
 	<aside class="left-nav" aria-label="Primary navigation">
-		<h3>Navigation</h3>
-		
-			<h4><a href="destinations.html">Where &amp; When</a></h4>
-				<p>Choosing a destination and when to go.</p>
-			<h4><a href="costs.html">Hidden Costs</a></h4>
-				<p>Extra costs you can avoid.</p>
-			<h4><a href="packing.html">Packing</a></h4>
-				<p>What to pack and what to leave behind.</p>
-			<h4><a href="food.html">Let's Do Lunch</a></h4>
-				<p>Eating on a budget.</p>
-			<h4><a href="saving.html">A Penny Saved</a></h4>
-				<p>Ways to save or fund your vacation.</p>
-			<h4><a href="tools.html">Tools</a></h4>
-				<p>Websites &amp; apps to help plan your vacation.</p>
-		
-	</aside>
+  <h3>Navigation</h3>
 
+  <div id="accordion">
+
+    <h4>Where &amp; When</h4>
+    <div>
+      <p><a href="destinations.html">Choosing a destination and when to go.</a></p>
+    </div>
+
+    <h4>Hidden Costs</h4>
+    <div>
+      <p><a href="costs.html">Extra costs you can avoid.</a></p>
+    </div>
+
+    <h4>Packing</h4>
+    <div>
+      <p><a href="packing.html">What to pack and what to leave behind.</a></p>
+    </div>
+
+    <h4>Let's Do Lunch</h4>
+    <div>
+      <p><a href="food.html">Eating on a budget.</a></p>
+    </div>
+
+    <h4>A Penny Saved</h4>
+    <div>
+      <p><a href="saving.html">Ways to save or fund your vacation.</a></p>
+    </div>
+
+    <h4>Tools</h4>
+    <div>
+      <p><a href="tools.html">Websites &amp; apps to help plan your vacation.</a></p>
+    </div>
+
+  </div>
+</aside>
 
 	<section class="content">
 		<h2>Overview of Website</h2>
