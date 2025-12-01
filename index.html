@@ -157,33 +157,10 @@
       </aside>
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <button id="locationBtn">Get My Location
-				</button>
-      <p id="demo"></p>
+    <footer class="footer">
+        <p style="text-align: right">&copy;2025 Jennifer Salinas </p>
     </footer>
 	  </div>
-
-
-  <script>
-    const output = document.getElementById("demo");
-    const btn = document.getElementById("locationBtn");
-
-    btn.addEventListener("click", () => {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
-      } else {
-        output.textContent = "Geolocation is not supported by this browser.";
-      }
-    });
-
-    function showPosition(position) {
-      output.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
-    }
-
-    function showError(error) {
-      output.textContent = `Error: ${error.message}`;
-    }
   
 </body>
 </html>
