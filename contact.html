@@ -43,7 +43,7 @@
         grid-template-columns: 1fr;
       }
 
-      .left-nav{
+      .left-nav {
         min-height: auto;
       }
 
@@ -71,7 +71,7 @@
         grid-template-columns: 160px 1fr;
       }
 
-      .left-nav{
+      .left-nav {
         min-height: 200px;
       }
 
@@ -95,62 +95,199 @@
         font-size: 30px;
       }
     }
+
+    /* ---------- FORM BASE STYLES ---------- */
+    .contact-form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 15px;
+    }
+
+    .full { grid-column: 1 / -1; }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    textarea { resize: vertical; }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #0077cc;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .secondary {
+      background-color: #ddd;
+      color: #333;
+    }
   </style>
-	
 </head>
 
 <body>
-	<div class="frame">
-		<header class="top">
-			<div class="logo">
-				<a href="index.html"><img src="images/logo.jpg" alt="Big Adventure logo"/></a>
-			</div>
+<div class="frame">
+<header class="top">
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.jpg" alt="Big Adventure logo"/></a>
+  </div>
 
-			<div class="top-right">
-				<nav class="nav-buttons" aria-label="Main navigation">
-					<a href="index.html">
-						<button type="button">Home</button>
-					</a>
-					<a href="about.html">	
-						<button type="button">About</button>
-					</a>
-					<a href="resources.html">
-						<button type="button">Resources</button>
-					</a>
-					<a href="contact.html">
-						<button type="button">Contact Us</button>
-					</a>
-				</nav>
+  <div class="top-right">
+    <nav class="nav-buttons" aria-label="Main navigation">
+      <a href="index.html"><button type="button">Home</button></a>
+      <a href="about.html"><button type="button">About</button></a>
+      <a href="resources.html"><button type="button">Resources</button></a>
+      <a href="contact.html"><button type="button">Contact Us</button></a>
+    </nav>
 
+    <div class="blog-title">Big Adventures on a Small Budget</div>
+  </div>
+</header>
 
-			<div class="blog-title">Big Adventures on a Small Budget</div>
-	</div>
-	</header>
+<main class="main">
+  
+  <aside class="left-nav" aria-label="Primary navigation">
+    <h3>Navigation</h3>
+      <h4><a href="destinations.html">Where &amp; When</a></h4>
+      <p>Choosing a destination and when to go.</p>
 
-    <main class="main">
-	<aside class="left-nav" aria-label="Primary navigation">
-		<h3>Navigation</h3>
-			<h4><a href="destinations.html">Where &amp; When</a></h4>
-				<p>Choosing a destination and when to go.</p>
-			<h4><a href="costs.html">Hidden Costs</a></h4>
-				<p>Extra costs you can avoid.</p>
-			<h4><a href="packing.html">Packing</a></h4>
-				<p>What to pack and what to leave behind.</p>
-			<h4><a href="food.html">Let's Do Lunch</a></h4>
-				<p>Eating on a budget.</p>
-			<h4><a href="saving.html">A Penny Saved</a></h4>
-				<p>Ways to save or fund your vacation.</p>
-			<h4><a href="tools.html">Tools</a></h4>
-				<p>Websites &amp; apps to help plan your vacation.</p>
-		
-	</aside>
+      <h4><a href="costs.html">Hidden Costs</a></h4>
+      <p>Extra costs you can avoid.</p>
 
+      <h4><a href="packing.html">Packing</a></h4>
+      <p>What to pack and what to leave behind.</p>
 
-	<section class="content">
-		<h2>Contact Us</h2>
-			
-		
+      <h4><a href="food.html">Let's Do Lunch</a></h4>
+      <p>Eating on a budget.</p>
 
-	</section>
+      <h4><a href="saving.html">A Penny Saved</a></h4>
+      <p>Ways to save or fund your vacation.</p>
 
-     </main>
+      <h4><a href="tools.html">Tools</a></h4>
+      <p>Websites &amp; apps to help plan your vacation.</p>
+  </aside>
+
+  <!-- ---------- CONTACT FORM SECTION ---------- -->
+  <section class="content">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm" class="contact-form" action="#" method="post">
+
+      <!-- Name -->
+      <div>
+        <label for="name">Full Name *</label>
+        <input id="name" name="name" type="text" required />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email">Email Address *</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" placeholder="Optional unless texting is selected" />
+      </div>
+
+      <!-- Text Opt-In -->
+      <div>
+        <label>Text Messages</label>
+        <div class="checkbox-row">
+          <input id="texts" name="wants_texts" type="checkbox" />
+          <label for="texts">I want to receive text updates</label>
+        </div>
+      </div>
+
+      <!-- Preferred Contact Method -->
+      <div class="full">
+        <label>Preferred Contact Method</label>
+        <div class="checkbox-row">
+          <label><input type="radio" name="contact_method" value="email" checked /> Email</label>
+          <label><input type="radio" name="contact_method" value="phone" /> Phone Call</label>
+          <label><input type="radio" name="contact_method" value="text" /> Text Message</label>
+        </div>
+      </div>
+
+      <!-- Best Time -->
+      <div>
+        <label for="time">Best Time to Contact</label>
+        <select id="time" name="best_time">
+          <option value="">Anytime</option>
+          <option value="morning">Morning (8–12)</option>
+          <option value="afternoon">Afternoon (12–5)</option>
+          <option value="evening">Evening (5–9)</option>
+        </select>
+      </div>
+
+      <!-- Source -->
+      <div>
+        <label for="source">How Did You Hear About Us?</label>
+        <select id="source" name="source">
+          <option value="">Select one</option>
+          <option>Search engine</option>
+          <option>Social media</option>
+          <option>Friend or family</option>
+          <option>Advertisement</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <!-- Message -->
+      <div class="full">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help"></textarea>
+      </div>
+
+      <!-- Privacy Consent -->
+      <div class="full checkbox-row">
+        <input id="privacy" name="privacy" type="checkbox" required />
+        <label for="privacy">I agree to the privacy policy.</label>
+      </div>
+
+      <!-- Submit Buttons -->
+      <div class="full actions">
+        <button type="submit">Send Message</button>
+        <button type="reset" class="secondary">Reset</button>
+      </div>
+
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p style="text-align: right">&copy;2025 Jennifer Salinas</p>
+</footer>
+
+</div>
+
+</body>
+</html>
