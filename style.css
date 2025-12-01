@@ -98,7 +98,6 @@ body {
 }
 
 .left-nav,
-.right-sidebar,
 .content {
 	background: var(--pale);
 	border-radius: 4px;
@@ -111,9 +110,7 @@ body {
 	font-size: 18px;
 	text-align: justify;
 }
-.right-sidebar {
-	float: right;
-}
+
 .footer {
 	background: var(--pale);
 	padding: 14px;
@@ -132,8 +129,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .left-nav,
-  .right-sidebar {
+  .left-nav{
     min-height: 120px;
   }
 
