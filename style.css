@@ -91,7 +91,7 @@ body {
 
 .main {
 	display: grid;
-	grid-template-columns: 10% 80% 10%;
+	grid-template-columns: 10% 90%;
 	gap: var(--gap);
 	align-items: start;
 	margin-bottom: var(--gap);
