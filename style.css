@@ -110,7 +110,10 @@ body {
 	font-size: 18px;
 	text-align: justify;
 }
-
+.list {
+			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+			text-align: left;
+		}
 .footer {
 	background: var(--pale);
 	padding: 14px;
