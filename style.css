@@ -77,7 +77,11 @@ body {
 }
 
 .nav-buttons button:hover {
-	text-decoration-color: white;
+	color: white;
+}
+
+.nav-buttons button:active {
+	color: yellow;
 }
 
 .blog-title {
