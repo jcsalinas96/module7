@@ -97,6 +97,12 @@
     }
   </style>
 	
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.accordion.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.accordion.min.js"></script>
+	
 </head>
 
 <body>
@@ -129,21 +135,37 @@
 
     <main class="main">
 	<aside class="left-nav" aria-label="Primary navigation">
-		<h3>Navigation</h3>
-			<h4><a href="destinations.html">Where &amp; When</a></h4>
-				<p>Choosing a destination and when to go.</p>
-			<h4><a href="costs.html">Hidden Costs</a></h4>
-				<p>Extra costs you can avoid.</p>
-			<h4><a href="packing.html">Packing</a></h4>
-				<p>What to pack and what to leave behind.</p>
-			<h4><a href="food.html">Let's Do Lunch</a></h4>
-				<p>Eating on a budget.</p>
-			<h4><a href="saving.html">A Penny Saved</a></h4>
-				<p>Ways to save or fund your vacation.</p>
-			<h4><a href="tools.html">Tools</a></h4>
-				<p>Websites &amp; apps to help plan your vacation.</p>
-		
+		<h3>Pages</h3>
+			
+	  <div id="Accordion1">
+			  <h4>Where &amp; When</h4>
+			  <div>
+			    <h5><a href="destinations.html">Destinations &amp; when to go.</a></h5>
+	    </div>
+			  <h4>Hidden Costs</h4>
+			  <div>
+			    <h5><a href="costs.html">Extra costs you can avoid.</a></h5>
+	    </div>
+			  <h4><a href="#">Packing</a></h4>
+			  <div>
+				  <h5><a href="packing.html">What to pack and/or leave behind.</a></h5>
+	    </div>
+		  <h4>Let's Do Lunch</h4>
+			  <div>
+			    <h5><a href="food.html">Eating on a budget.</a></h5>
+	    </div>
+		  <h4>A Penny Saved</h4>
+			  <div>
+			    <h5><a href="saving.html">Ways to save/fund your vacation.</a></h5>
+	    </div>
+		  <h4>Tools</h4>
+			  <div>
+			    <h5><a href="tools.html">Websites &amp; apps for vacation planning.</a></h5>
+	    </div>
+	  </div>
+
 	</aside>
+
 
 
 	<section class="content">
@@ -161,5 +183,11 @@
         <p style="text-align: right">&copy;2025 Jennifer Salinas </p>
     </footer>
 	</div>
+	
+<script type="text/javascript">
+$(function() {
+	$( "#Accordion1" ).accordion(); 
+});
+    </script>
 </body>
 </html>
