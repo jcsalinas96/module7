@@ -97,7 +97,11 @@
       }
     }
   </style>
-	
+  <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+  <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+  <link href="jQueryAssets/jquery.ui.accordion.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.accordion.min.js"></script>
 </head>
 
 <body>
@@ -131,7 +135,22 @@
     <main class="main">
 	<aside class="left-nav" aria-label="Primary navigation">
 		<h3>Navigation</h3>
-			<h4><a href="destinations.html">Where &amp; When</a></h4>
+			
+	  <div id="Accordion1">
+			  <h4><a href="#">Where &amp; When</a></h4>
+			  <div>
+			    <h5>Destinations and when to go.</h5>
+	    </div>
+			  <h3><a href="#">Section 2</a></h3>
+			  <div>
+			    <p>Content 2</p>
+	    </div>
+			  <h3><a href="#">Section 3</a></h3>
+			  <div>
+			    <p>Content 3</p>
+	    </div>
+	  </div>
+<h4><a href="destinations.html">Where &amp; When</a></h4>
 				<p>Choosing a destination and when to go.</p>
 			<h4><a href="costs.html">Hidden Costs</a></h4>
 				<p>Extra costs you can avoid.</p>
@@ -167,5 +186,10 @@
         <p style="text-align: right">&copy;2025 Jennifer Salinas </p>
     </footer>
 	</div>
+<script type="text/javascript">
+$(function() {
+	$( "#Accordion1" ).accordion(); 
+});
+    </script>
 </body>
 </html>
